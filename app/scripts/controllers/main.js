@@ -14,4 +14,33 @@ angular.module('paketurApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.destinations = [
+      {
+        image: 'images/puyango.jpg',
+        title: 'Puyango',
+        active: true
+      },
+      {
+        image: 'images/shiriculapo.jpg',
+        title: 'Shiriculapo',
+        active: false
+      },
+      {
+        image: 'images/celica.jpg',
+        title: 'Celica',
+        active: false,
+      },
+      {
+        image: 'images/puyango.jpg',
+        title: 'Puyango',
+        active: false
+      },
+      {
+        image: 'images/puyango.jpg',
+        title: 'Puyango',
+        active: false,
+      }
+    ];
+
   });
