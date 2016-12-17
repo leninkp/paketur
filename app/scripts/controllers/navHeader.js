@@ -8,23 +8,26 @@
  * Controller of the paketurApp
  */
 angular.module('paketurApp')
-  .controller('NavCtrl', function ($scope, $rootScope) {
+  .controller('NavCtrl', function ($scope) {
 
     $scope.links =  [
       {
         route: '',
         name: 'Inicio',
-        active: true
+        active: true,
+        hash: '#/'
       },
       {
         route: 'paquete',
         name: 'Arma tu Paquete',
-        active: false
+        active: false,
+        hash: '#/paquete'
       },
       {
         route: 'about',
         name: 'Información',
-        active: false
+        active: false,
+        hash: '#/about'
       },
     ];
 
@@ -34,5 +37,13 @@ angular.module('paketurApp')
         current.active = link.route === current.route;
       });
     };
+
+    function init() {
+      angular.forEach($scope.links, function (current) {
+        current.active = window.location.hash === current.hash;
+      });  
+    }
+
+    init();
 
   });

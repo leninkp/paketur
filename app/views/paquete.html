@@ -68,11 +68,31 @@
 
   <div class="total-bar">
     <div class="total-tour">
-      <div class="text">
-        Costo del Tour
+      <div class="resumen">
+        <div class="dias">
+          <strong>Dias: {{diaCheck}}</strong>
+        </div>
+        <div class="destinos">
+          <strong>Destinos</strong>
+          <ul>
+            <li ng-repeat="dest in destinosCheck">{{dest}}</li>
+
+          </ul>
+        </div>
+        <div class="servicios">
+          <strong>Servicios</strong>
+          <ul>
+            <li ng-repeat="serv in serviciosCheck">{{serv}}</li>
+          </ul>
+        </div>
       </div>
-      <div class="total">
-        180$
+      <div class="total-square">
+        <div class="text">
+          Costo del Tour
+        </div>
+        <div class="total">
+          {{totalTour()}}$
+        </div>
       </div>
     </div>
   </div>

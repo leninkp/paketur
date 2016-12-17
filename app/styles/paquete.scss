@@ -4,12 +4,12 @@
 
     .text {
       position: absolute;
-      top: 120px;
+      top: 30%;
       left: 40px;
 
       h4 {
         font-weight: 700;
-        font-size: 22px;
+        font-size: 32px;
       }
 
       .little-text {
@@ -47,7 +47,7 @@
     }
 
     .options-container {
-      min-height: 800px;
+      min-height: 500px;
 
       .dias {
         display: flex;
@@ -163,13 +163,42 @@
     bottom: 10px;
     right: 20px;
     text-align: center;
-    padding: 10px;
     background-color: #e7e7e7;
+    cursor: pointer;
+
+    &:hover {
+      .total-tour {
+        .resumen {
+          display: block;
+        }
+      }
+    }
 
     .total-tour {
-      .total {
-        font-size: 28px;
-        font-weight: bold;
+
+      .resumen {
+        display: none;
+
+        .destinos {
+          border-top: 1px dashed #565656;
+          border-bottom: 1px dashed #565656;
+        }
+
+        .servicios {
+          border-bottom: 1px dashed #565656;
+        }
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+      }
+      .total-square {
+        padding: 10px;
+        .total {
+          font-size: 28px;
+          font-weight: bold;
+        }
       }
     }
   }

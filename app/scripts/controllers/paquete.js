@@ -26,10 +26,11 @@ angular.module('paketurApp')
     ];
 
     $scope.diaSeleccionado = function (dia) {
+      $scope.diaCheck = dia.numero;
       angular.forEach($scope.dias, function (current) {
         current.selected = dia.numero === current.numero;
       });
-    }
+    };
 
     $scope.destinos = [
       {
@@ -69,9 +70,19 @@ angular.module('paketurApp')
       }
     ];
 
+    $scope.destinosCheck = [];
+
     $scope.destinoSeleccionado = function (destino) {
       destino.selected = !destino.selected;
-    }
+      if (destino.selected) {
+        $scope.destinosCheck.push(destino.nombre);
+      }else{
+        var index = $scope.destinosCheck.indexOf(destino.nombre);
+        if (index > -1) {
+          $scope.destinosCheck.splice(index, 1);
+        }
+      }
+    };
 
     $scope.servicios = [
       {
@@ -96,9 +107,19 @@ angular.module('paketurApp')
       }
     ];
 
+    $scope.serviciosCheck = [];
+
     $scope.servicioSeleccionado = function (servicio) {
       servicio.selected = !servicio.selected;
-    }
+      if (servicio.selected) {
+        $scope.serviciosCheck.push(servicio.nombre);
+      }else{
+        var index = $scope.serviciosCheck.indexOf(servicio.nombre);
+        if (index > -1) {
+          $scope.serviciosCheck.splice(index, 1);
+        }
+      }
+    };
 
     $scope.opciones = [
       {
@@ -120,8 +141,24 @@ angular.module('paketurApp')
 
     $scope.opcionSeleccionado = function (opcion) {
       $scope.opcionSelected = opcion;
-    }
+    };
 
     $scope.opcionSelected = $scope.opciones[0];
+
+    $scope.totalTour = function(){
+      var value = 0;
+      if ($scope.diaCheck && $scope.destinosCheck.length > 0 && $scope.serviciosCheck.length > 0) {
+        if ($scope.diaCheck === 3) {
+          value = 180;
+        }
+        if ($scope.diaCheck === 2) {
+          value = 100;
+        }
+        if ($scope.diaCheck === 1) {
+          value = 60;
+        }
+      }
+      return value;
+    };
 
   });
