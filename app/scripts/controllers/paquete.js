@@ -34,31 +34,38 @@ angular.module('paketurApp')
     $scope.destinos = [
       {
         nombre: 'Catacocha',
-        selected: false
+        selected: false,
+        image: 'images/shiriculapo.jpg'
       },
       {
         nombre: 'Celica',
-        selected: false
+        selected: false,
+        image: 'images/celica.jpg'
       },
       {
         nombre: 'Alamor',
-        selected: false
+        selected: false,
+        image: 'images/alamor-iglesia.png'
       },
       {
         nombre: 'Puyango',
-        selected: false
+        selected: false,
+        image: 'images/puyango.jpg'
       },
       {
         nombre: 'Pindal',
-        selected: false
+        selected: false,
+        image: 'images/pindal-piscina.jpg'
       },
       {
         nombre: 'Zapotillo',
-        selected: false
+        selected: false,
+        image: 'images/zapotillo-ciudad.jpg'
       },
       {
         nombre: 'Macara',
-        selected: false
+        selected: false,
+        image: 'images/macara-ciudad.jpg'
       }
     ];
 

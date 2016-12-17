@@ -1,4 +1,5 @@
 <div class="my-container">
+
   <div class="header-paquete">
     <img src="images/travel.jpg" class="img-responsive" alt="travel girl">
     <div class="text">
@@ -6,21 +7,23 @@
       <span class="little-text">Alojamientos, experiencias y lugares</span>
     </div>
   </div>
+
   <div class="form-paquete">
     <div class="form-options">
       <div class="step {{opcionSelected.key === opc.key ? 'seleccionado' : ''}}"
            ng-repeat="opc in opciones"
            ng-click="opcionSeleccionado(opc)">
         <div class="title text-center">
-          {{$index + 1}} {{opc.nombre}}
+          {{$index + 1}}. {{opc.nombre}}
         </div>
       </div>
     </div>
+
     <div class="options-container">
-      <div ng-show="opcionSelected.key === 'disp'">
+      <div class="option" ng-show="opcionSelected.key === 'disp'">
         <h3 class="text-center">Número de Dias</h3>
         <div class="dias">
-          <div class="dia {{dia.selected ? 'seleccionado' : 'no'}}"
+          <div class="dia {{dia.selected ? 'seleccionado' : ''}}"
               ng-repeat="dia in dias"
               ng-click="diaSeleccionado(dia)">
             {{dia.numero}}
@@ -28,17 +31,22 @@
         </div>
       </div>
 
-      <div ng-show="opcionSelected.key === 'dest'">
+      <div class="option" ng-show="opcionSelected.key === 'dest'">
         <div class="destinos">
           <div ng-repeat="destino in destinos"
               ng-click="destinoSeleccionado(destino)"
-              class="destino col-md-4 {{destino.selected ? 'seleccionado' : ''}}">
-            {{destino.nombre}}
+              class="destino col-md-4 {{destino.selected ? 'seleccionado' : ''}}"
+              style="background-image:url({{destino.image}})">
+              <div class="text">
+                <span ng-if="destino.selected" class="glyphicon glyphicon-ok-sign"></span>
+                {{destino.nombre}}
+              </div>
+              <div ng-if="!destino.selected" class="backdrop"></div>
           </div>
         </div>
       </div>
 
-      <div ng-show="opcionSelected.key === 'serv'">
+      <div class="option" ng-show="opcionSelected.key === 'serv'">
         <div class="servicios">
           <div ng-repeat="serv in servicios"
               ng-click="servicioSeleccionado(serv)"
@@ -55,18 +63,18 @@
           </div>
         </div>
       </div>
-
-      <br>
-
-      <div class="total-tour">
-        <div class="text">
-          Costo del Tour:
-        </div>
-        <div class="total">
-          180$
-        </div>
-      </div>
-
     </div>
   </div>
+
+  <div class="total-bar">
+    <div class="total-tour">
+      <div class="text">
+        Costo del Tour
+      </div>
+      <div class="total">
+        180$
+      </div>
+    </div>
+  </div>
+
 </div>
