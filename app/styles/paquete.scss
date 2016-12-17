@@ -1,0 +1,154 @@
+.my-container {
+  .header-paquete {
+    position: relative;
+
+    .text {
+      position: absolute;
+      top: 120px;
+      left: 40px;
+
+      h4 {
+        font-weight: 700;
+        font-size: 22px;
+      }
+
+      .little-text {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .form-paquete {
+
+    .form-options {
+      display: flex;
+      justify-content: space-around;
+
+      .step {
+        width: 100%;
+        border: 1px solid #e7e7e7;
+        padding: 10px 0px 10px 0px;
+        cursor: pointer;
+
+        &:hover{
+          background-color: #f7f7f7;
+          color: #3FC380;
+        }
+
+        .title {
+          font-size: 18px;
+        }
+
+        &.seleccionado {
+          background-color: #f7f7f7;
+          color: #3FC380;
+        }
+      }
+    }
+
+    .options-container {
+      min-height: 800px;
+
+      .dias {
+        display: flex;
+        justify-content: space-around;
+
+        .dia {
+          font-size: 35px;
+          border: 1px solid #3FC380;
+          color: #3FC380;
+          border-radius: 50%;
+          min-width: 100px;
+          min-height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            background-color: #3FC380;
+            color: #f7f7f7;
+            cursor: pointer;
+          }
+
+            &.seleccionado {
+              background-color: #3FC380;
+              color: #f7f7f7;
+            }
+        }
+      }
+
+      .destinos {
+
+        .destino {
+          font-size: 18px;
+          color: #3FC380;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 200px;
+
+          &:hover {
+            background-color: #3FC380;
+            color: #f7f7f7;
+            cursor: pointer;
+          }
+
+          &.seleccionado {
+            background-color: #3FC380;
+            color: #f7f7f7;
+            border: 1px solid white;
+          }
+        }
+      }
+
+      .servicios {
+        display: flex;
+        flex-wrap: wrap;
+
+        .servicio {
+          font-size: 18px;
+          color: #3FC380;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 200px;
+          flex-direction: column;
+          width: 50%;
+
+          &:hover {
+            background-color: #3FC380;
+            color: #f7f7f7;
+            cursor: pointer;
+          }
+
+          .icon {
+            font-size: 50px;
+          }
+
+          &.seleccionado {
+            background-color: #3FC380;
+            color: #f7f7f7;
+            border: 1px solid white;
+          }
+        }
+      }
+    }
+  }
+
+  .total-tour {
+    border-top: 1px solid #3fc380;
+    border-bottom: 1px solid #3fc380;
+    display: flex;
+    justify-content: space-around;
+
+    .text {
+      font-size: 24px;
+    }
+
+    .total {
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+
+}

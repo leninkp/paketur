@@ -13,6 +13,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/overrides.css">
+    <link rel="stylesheet" href="styles/paquete.css">
     <!-- endbuild -->
   </head>
   <body ng-app="paketurApp">
@@ -21,7 +22,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header" ng-controller="NavCtrl">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -39,9 +40,9 @@
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">INICIO</a></li>
-              <li><a ng-href="#/paquete">ARMA TU PAQUETE</a></li>
-              <li><a ng-href="#/about">INFORMACIÓN</a></li>
+              <li class="{{link.active ? 'active' : ''}}" ng-repeat="link in links" ng-click="clickLink(link)">
+                <a href="#/{{link.route}}">{{link.name}} </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -51,13 +52,6 @@
     <div class="container">
     <div ng-view=""></div>
     </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -90,5 +84,6 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/paquete.js"></script>
         <!-- endbuild -->
+        <script src="scripts/controllers/navHeader.js"></script>
 </body>
 </html>
