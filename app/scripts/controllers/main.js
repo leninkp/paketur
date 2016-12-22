@@ -32,13 +32,13 @@ angular.module('paketurApp')
         active: false,
       },
       {
-        image: 'images/puyango.jpg',
-        title: 'Puyango',
+        image: 'images/guayacanes.jpg',
+        title: 'Zapotillo',
         active: false
       },
       {
-        image: 'images/puyango.jpg',
-        title: 'Puyango',
+        image: 'images/pindal-piscina.jpg',
+        title: 'Pindal',
         active: false,
       }
     ];

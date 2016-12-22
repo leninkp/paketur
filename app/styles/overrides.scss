@@ -2,6 +2,13 @@
   max-width: 950px;
 }
 
+.header-app {
+
+  .active {
+    border-bottom: 3px solid #50c88b;
+  }
+}
+
 body {
   background-color: #fafafa;
   // background-image: url(http://www.mancomunidadbosqueseco.gob.ec/wp-content/uploads/2015/12/fondo_final_2.png);
@@ -22,16 +29,35 @@ body {
       padding: 0px 10px 0px 10px;
     }
   }
+  #carousel-example-generic {
+    .carousel-inner {
+      .item {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 500px;
+      }
+    }
+  }
+
+  .noticia {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    .text {
+      width: 30%;
+    }
+    .parrafo {
+      width: 70%;
+      text-align: justify;
+    }
+  }
 }
 
 .carousel-wrapper {
   #slides_control > div{
     height: 200px;
-  }
-
-  img{
-    margin:auto;
-    width: 400px;
   }
 
   #slides_control {

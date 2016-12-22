@@ -13,8 +13,8 @@
     <div class="carousel-inner">
       <div class="item"
           ng-repeat="destination in destinations"
-          ng-class="{active: destination.active}">
-        <img ng-src="{{destination.image}}" class="img-responsive">
+          ng-class="{active: destination.active}"
+          style="background-image:url({{destination.image}});">
         <div class="carousel-caption">
           <h3>{{destination.title}}</h3>
         </div>
@@ -30,12 +30,33 @@
     </a>
   </div> <!-- Carousel -->
 
-<br>
   <!-- Informacion -->
-  <div class="text">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+
+  <div class="noticia">
+    <div class="text">
+      <h2>Mancomunidad “Bosque Seco” participa en programa de capacitación para agua potable en Corea del Sur</h2>
+    </div>
+    <div class="parrafo">
+      <p>
+        El pasado mes de noviembre en la ciudad de Seúl, República de Corea del Sur; la Mancomunidad “Bosque Seco” participó a través de su técnico del Laboratorio Ing. Esvar Díaz de un programa de capacitación en “Water Management Training Program for Foreing City Officials.” organizado por el Centro de Desarrollo de Recursos Humanos de Seúl (SHRDC) del Gobierno Metropolitano de Seúl, el propósito de este programa fue de construir relaciones de cooperación sostenibles en el campo del agua de consumo humano, compartiendo información, conocimientos y tecnologías en el abastecimiento de agua de consumo y tratamiento de aguas residuales, además de proporcionar una oportunidad para compartir el exitoso modelo de agua de Seúl a través de programas de capacitación sistemática incluyendo las clases académicas, visitas a laboratorios y plantas de tratamiento.
+        La Mancomunidad “Bosque Seco” a través de una ponencia compartió su experiencia como institución, destacando su modelo de gestión el cual ha sido enfocado a la conservación de los RR.NN y monitoreo del agua de consumo de los cantones mancomunados. Esta capacitación fortalecerá nuestra eficiencia de trabajo.
+      </p>
+    </div>
   </div>
+
+  <div class="noticia">
+    <div class="parrafo">
+      <p>
+        (Guayaquil, Guayas, 16-12-2016).- ‘Línea Caliente’ es una comedia para público adulto; divertida, sin sobrepasar lo picante y obsceno, roba más de una sonrisa, y será una de las propuestas que el conocido actor y director, Luis Aguirre, pondrá en escena a partir de mediados de enero del próximo año en una sala de microteatro, que funcionará en las instalaciones del hotel HM, de Guayaquil.
+        Con este proyecto, que se tomará las noches de Guayaquil, no solo se busca fusionar el arte, turismo y cultura, sino que se dará un espacio para el talento ecuatoriano. Para el Presidente de la Cámara de Turismo del Guayas, Holbach Muñetón, la apertura de esta sala será una opción para las personas que decidan quedarse en la ciudad durante la temporada playera 2017.
+        El espacio, que permitirá exponer el talento y el trabajo de los actores, contará con dos obras de teatro que serán presentadas todos los días y permanecerán en cartelera durante un mes, luego de esto se renovará la programación. Además de las destinadas a público adulto, se incluirán comedias infantiles.
+      </p>
+    </div>
+    <div class="text">
+      <h2 class="text-center">Guayaquil</h2>
+      <img src="images/marca-pais.png" alt="" class="img-responsive">
+    </div>
+  </div>
+
   <!-- end Informacion -->
 </div>
