@@ -7,6 +7,7 @@
     "gzippo": "^0.2.0"
   },
   "repository": {},
+  "main": "server.js",
   "devDependencies": {
     "connect-modrewrite": "^0.9.0",
     "grunt": "^0.4.5",
